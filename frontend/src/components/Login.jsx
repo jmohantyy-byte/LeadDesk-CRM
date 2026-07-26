@@ -29,9 +29,9 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "https://leaddesk-crm.onrender.com/api/admin/login",
-        formData
-      );
+  "https://leaddesk-crm.onrender.com/api/admin/login",
+  formData
+);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", res.data.role);
