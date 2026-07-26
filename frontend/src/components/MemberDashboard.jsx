@@ -14,7 +14,7 @@ function MemberDashboard() {
     const token = localStorage.getItem("token");
 
     await axios.put(
-      `http://localhost:5000/api/leads/${id}`,
+      `https://YOUR-RENDER-URL.onrender.com/api/leads/${id}`,
       { status },
       {
         headers: {
@@ -32,7 +32,7 @@ function MemberDashboard() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/leads/member",
+        "https://YOUR-RENDER-URL.onrender.com/api/leads/member",
         {
           headers: {
             Authorization: `Bearer ${token}`,

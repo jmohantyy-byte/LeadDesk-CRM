@@ -29,7 +29,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://YOUR-RENDER-URL.onrender.com/api/admin/login",
         formData
       );
 

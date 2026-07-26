@@ -24,7 +24,7 @@ function LeadForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/leads/submit",
+        "https://YOUR-RENDER-URL.onrender.com/api/leads/submit",
         formData
       );
 

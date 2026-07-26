@@ -36,7 +36,7 @@ function Dashboard() {
   const fetchLeads = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/leads",
+        "https://YOUR-RENDER-URL.onrender.com/api/leads",
         {
           params: {
             search,
@@ -58,7 +58,7 @@ setStatistics(res.data.statistics);
   const fetchMembers = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/users/members",
+        "https://YOUR-RENDER-URL.onrender.com/api/users/members",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -75,7 +75,7 @@ setStatistics(res.data.statistics);
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/leads/${id}`,
+        `https://YOUR-RENDER-URL.onrender.com/api/leads/${id}`,
         { status },
         {
           headers: {
@@ -95,7 +95,7 @@ setStatistics(res.data.statistics);
   const assignLead = async (leadId, memberId) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/leads/${leadId}/assign`,
+        `https://YOUR-RENDER-URL.onrender.com/api/leads/${leadId}/assign`,
         {
           assignedTo: memberId,
         },
@@ -124,7 +124,7 @@ setStatistics(res.data.statistics);
       }
 
       await axios.post(
-        `http://localhost:5000/api/leads/${leadId}/note`,
+        `https://YOUR-RENDER-URL.onrender.com/api/leads/${leadId}/note`,
         { text },
         {
           headers: {
