@@ -29,7 +29,7 @@ function Login() {
       setLoading(true);
 
       const res = await axios.post(
-        "https://leaddesk-crm.onrender.com/api/admin/login"
+        "https://leaddesk-crm.onrender.com/api/admin/login",
         formData
       );
 
